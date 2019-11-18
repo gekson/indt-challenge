@@ -16,7 +16,6 @@ public class Disk {
 
     @Id
     private String id;
-    @Indexed(unique = true, direction = IndexDirection.DESCENDING)
     private String name;
     private BigDecimal price;
 
