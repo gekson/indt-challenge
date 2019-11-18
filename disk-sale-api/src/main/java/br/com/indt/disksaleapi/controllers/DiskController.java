@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/api/")
+@CrossOrigin(origins = "*")
+@RequestMapping("/api")
 public class DiskController {
 
     private DiskService diskService;

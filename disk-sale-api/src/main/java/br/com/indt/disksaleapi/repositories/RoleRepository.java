@@ -1,9 +1,10 @@
 package br.com.indt.disksaleapi.repositories;
 
-import br.com.indt.disksaleapi.model.Sale;
+import br.com.indt.disksaleapi.model.Role;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SaleRepository extends MongoRepository<Sale, String> {
+public interface RoleRepository extends MongoRepository<Role, String> {
+    Role findByRole(String role);
 }
