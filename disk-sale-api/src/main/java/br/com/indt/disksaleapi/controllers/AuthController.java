@@ -5,8 +5,6 @@ import br.com.indt.disksaleapi.model.User;
 import br.com.indt.disksaleapi.repositories.UserRepository;
 import br.com.indt.disksaleapi.services.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
