@@ -23,6 +23,10 @@ import {
   MatCardModule,
   MatFormFieldModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SaleComponent } from './sale/sale.component';
+import { ChartModule, HIGHCHARTS_MODULES } from 'angular-highcharts';
+import * as more from 'highcharts/highcharts-more.src';
+import * as exporting from 'highcharts/modules/exporting.src';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DiskListComponent,
     LoginComponent,
     RegisterComponent,
-    UpdateDiskComponent
+    UpdateDiskComponent,
+    SaleComponent
   ],
   imports: [
     BrowserModule,
@@ -49,14 +54,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ChartModule
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
-    }
+    },
+    { provide: HIGHCHARTS_MODULES, useFactory: () => [ more, exporting ] }
   ],
   bootstrap: [AppComponent]
 })

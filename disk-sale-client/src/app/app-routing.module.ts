@@ -7,6 +7,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { DiskDetailsComponent } from './disk-details/disk-details.component';
 import { CreateDiskComponent } from './create-disk/create-disk.component';
 import { UpdateDiskComponent } from './update-disk/update-disk.component';
+import { SaleComponent } from './sale/sale.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: DiskDetailsComponent
   },
+  {
+    path: 'sales',
+    canActivate: [AuthGuard],
+    component: SaleComponent
+  }
 ];
 
 @NgModule({
